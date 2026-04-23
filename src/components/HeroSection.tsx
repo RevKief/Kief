@@ -59,7 +59,7 @@ export default function HeroSection() {
 
       {/* ── Foreground photo: highest z so it's IN FRONT of ticker ── */}
       <motion.div
-        className="absolute right-0 bottom-0 h-[75%] md:h-[90%] lg:h-[105%] w-auto pointer-events-none select-none z-30"
+        className="absolute right-0 bottom-0 h-[60vh] sm:h-[70vh] md:h-[85vh] lg:h-[90vh] w-auto pointer-events-none select-none z-[5] md:z-30"
         variants={scaleIn}
         initial="hidden"
         animate="show"
