@@ -1,1 +1,163 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-marker: "Permanent Marker", cursive;
+
+  --color-amber-gold: #d4a017;
+  --color-amber-gold-light: #e8b830;
+  --color-hero-orange: #c47a2a;
+  --color-hero-orange-dark: #8a4e15;
+  --color-hero-orange-deep: #5c300a;
+}
+
+/* ────── SOFT NOISE / GRAIN ANIMATIONS ────── */
+
+/* Gentle brightness flicker — barely noticeable pulse */
+@keyframes soft-flicker {
+  0%, 100% { filter: brightness(1) contrast(1); }
+  15%      { filter: brightness(1.02) contrast(1.01); }
+  30%      { filter: brightness(0.98) contrast(1); }
+  45%      { filter: brightness(1) contrast(1.02); }
+  60%      { filter: brightness(1.01) contrast(0.99); }
+  75%      { filter: brightness(0.99) contrast(1.01); }
+  90%      { filter: brightness(1.015) contrast(1); }
+}
+
+/* Noise grain position shift — makes the static feel alive */
+@keyframes noise-drift {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(-1%, -1%); }
+  20%  { transform: translate(1%, 0.5%); }
+  30%  { transform: translate(-0.5%, 1%); }
+  40%  { transform: translate(0.5%, -0.5%); }
+  50%  { transform: translate(-1%, 0.5%); }
+  60%  { transform: translate(0.5%, -1%); }
+  70%  { transform: translate(-0.5%, -0.5%); }
+  80%  { transform: translate(1%, 1%); }
+  90%  { transform: translate(-0.5%, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Soft opacity pulse for the noise layer */
+@keyframes noise-pulse {
+  0%, 100% { opacity: 0.06; }
+  25%      { opacity: 0.09; }
+  50%      { opacity: 0.05; }
+  75%      { opacity: 0.08; }
+}
+
+/* Scan line sweep — very subtle */
+@keyframes scan-sweep {
+  0%   { top: -5%; }
+  100% { top: 105%; }
+}
+
+/* Occasional micro-glitch — very rare, very soft */
+@keyframes micro-glitch {
+  0%, 96%  { transform: translate(0); opacity: 0; }
+  97%      { transform: translate(2px, 0); opacity: 0.15; }
+  98%      { transform: translate(-1px, 1px); opacity: 0.1; }
+  99%      { transform: translate(1px, -1px); opacity: 0.12; }
+  100%     { transform: translate(0); opacity: 0; }
+}
+
+/* ────── HERO BG: photo + soft noise ────── */
+.hero-bg {
+  background: url("/images/hero-background.jpg") center center / cover no-repeat;
+  animation: soft-flicker 6s ease-in-out infinite;
+}
+
+/* Soft duplicate layer — occasional micro-shift, mostly invisible */
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: url("/images/hero-background.jpg") center center / cover no-repeat;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  animation: micro-glitch 8s steps(1) infinite;
+}
+
+/* Scan line — very faint */
+.hero-scanline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 20%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.04) 80%,
+    transparent 100%
+  );
+  animation: scan-sweep 4s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Animated noise grain texture — drifts and pulses */
+.hero-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  animation: noise-drift 0.8s steps(4) infinite, noise-pulse 3s ease-in-out infinite;
+  /* Oversized so drift doesn't show edges */
+  inset: -5%;
+  width: 110%;
+  height: 110%;
+}
+
+/* ────── INFINITE TICKER ────── */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+/* ────── SERVICES RED GRADIENT ────── */
+@keyframes red-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25%      { background-position: 100% 50%; }
+  50%      { background-position: 50% 100%; }
+  75%      { background-position: 0% 0%; }
+}
+
+.services-gradient {
+  background: linear-gradient(
+    135deg,
+    #1a0000 0%,
+    #4a0e0e 20%,
+    #8b1a1a 40%,
+    #b91c1c 55%,
+    #991b1b 70%,
+    #450a0a 90%,
+    #1a0000 100%
+  );
+  background-size: 300% 300%;
+  animation: red-gradient-shift 12s ease infinite;
+}
+
+/* Synthwave Grid for App Dev Section */
+.synthwave-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(239, 68, 68, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 68, 68, 0.4) 1px, transparent 1px);
+  transform: perspective(600px) rotateX(60deg) translateY(50px) translateZ(-200px);
+  animation: grid-move 10s linear infinite;
+}
+
+@keyframes grid-move {
+  from { background-position: 0 0; }
+  to { background-position: 0 40px; }
+}
