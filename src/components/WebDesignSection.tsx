@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useSpring } from "framer-motion";
+import { motion, AnimatePresence, useSpring, Variants } from "framer-motion";
 
 const WEB_PROJECTS = [
   { name: "REFORMED BUSINESS ALLIANCE", url: "https://reformedbusinessalliance.com/", image: "/images/web-rba.png" },
@@ -12,12 +12,12 @@ const WEB_PROJECTS = [
   { name: "TRAILER PARTS PLUS", url: "https://trailerpartsplusfl.com/", image: "/images/web-tpp.png" },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
 };
