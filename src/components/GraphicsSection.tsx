@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 
 // Pre-selected high impact images from the graphics folder
 const GRAPHIC_IMAGES = [
-  { src: "/images/graphics/1689-coin.jpg", top: "5%", left: "5%", rotate: -12, size: "w-48 md:w-64" },
-  { src: "/images/graphics/crown-of-ashes.jpg", top: "15%", left: "65%", rotate: 8, size: "w-64 md:w-80" },
-  { src: "/images/graphics/hebrews.jpg", top: "50%", left: "5%", rotate: 15, size: "w-56 md:w-72" },
-  { src: "/images/graphics/the-stormy-banks.jpg", top: "55%", left: "60%", rotate: -5, size: "w-72 md:w-96" },
-  { src: "/images/graphics/wisdom-calls.jpg", top: "10%", left: "30%", rotate: 6, size: "w-56 md:w-72" },
-  { src: "/images/graphics/joy-to-the-world.png", top: "70%", left: "25%", rotate: -14, size: "w-64 md:w-80" },
-  { src: "/images/graphics/ag-resolutions-vol-1.jpg", top: "40%", left: "40%", rotate: 0, size: "w-48 md:w-64" },
-  { src: "/images/graphics/verity.jpg", top: "80%", left: "75%", rotate: 10, size: "w-48 md:w-64" },
-  { src: "/images/graphics/battle-cry.jpg", top: "25%", left: "85%", rotate: -18, size: "w-40 md:w-56" },
-  { src: "/images/graphics/reformation-day.png", top: "75%", left: "5%", rotate: -8, size: "w-56 md:w-72" },
-  { src: "/images/graphics/gloria-tnc.png", top: "35%", left: "15%", rotate: 12, size: "w-64 md:w-80" },
+  { src: "/images/graphics/1689-coin.jpg", top: "5%", left: "5%", rotate: -12, size: "w-32 sm:w-48 md:w-64" },
+  { src: "/images/graphics/crown-of-ashes.jpg", top: "15%", left: "65%", rotate: 8, size: "w-40 sm:w-64 md:w-80" },
+  { src: "/images/graphics/hebrews.jpg", top: "50%", left: "5%", rotate: 15, size: "w-32 sm:w-56 md:w-72" },
+  { src: "/images/graphics/the-stormy-banks.jpg", top: "55%", left: "60%", rotate: -5, size: "w-48 sm:w-72 md:w-96" },
+  { src: "/images/graphics/wisdom-calls.jpg", top: "10%", left: "30%", rotate: 6, size: "w-32 sm:w-56 md:w-72" },
+  { src: "/images/graphics/joy-to-the-world.png", top: "70%", left: "25%", rotate: -14, size: "w-40 sm:w-64 md:w-80" },
+  { src: "/images/graphics/ag-resolutions-vol-1.jpg", top: "40%", left: "40%", rotate: 0, size: "w-32 sm:w-48 md:w-64" },
+  { src: "/images/graphics/verity.jpg", top: "80%", left: "75%", rotate: 10, size: "w-32 sm:w-48 md:w-64" },
+  { src: "/images/graphics/battle-cry.jpg", top: "25%", left: "85%", rotate: -18, size: "w-24 sm:w-40 md:w-56" },
+  { src: "/images/graphics/reformation-day.png", top: "75%", left: "5%", rotate: -8, size: "w-32 sm:w-56 md:w-72" },
+  { src: "/images/graphics/gloria-tnc.png", top: "35%", left: "15%", rotate: 12, size: "w-40 sm:w-64 md:w-80" },
 ];
 
 export default function GraphicsSection() {
@@ -62,7 +62,7 @@ export default function GraphicsSection() {
             animate={{ x: ["-50%", 0] }}
             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           >
-            {Array(4).fill("BRANDING • CREDIBILITY • DIFFERENTIATION • CLARITY • ").map((text, i) => (
+            {Array(8).fill("BRANDING • CREDIBILITY • DIFFERENTIATION • CLARITY • ").map((text, i) => (
               <h2 
                 key={i} 
                 className="font-display font-black text-transparent text-[80px] md:text-[150px] lg:text-[220px] leading-none drop-shadow-[0_0_10px_rgba(0,0,0,1)]"
@@ -81,7 +81,7 @@ export default function GraphicsSection() {
             animate={{ x: [0, "-50%"] }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
           >
-            {Array(4).fill("CONSISTENCY • CONVERSION • COMMUNICATION • ").map((text, i) => (
+            {Array(8).fill("CONSISTENCY • CONVERSION • COMMUNICATION • ").map((text, i) => (
               <h2 
                 key={i} 
                 className="font-display font-black text-amber-gold text-[100px] md:text-[180px] lg:text-[280px] leading-none drop-shadow-[0_0_40px_rgba(212,160,23,0.6)]"
@@ -99,7 +99,7 @@ export default function GraphicsSection() {
             animate={{ x: ["-50%", 0] }}
             transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
           >
-            {Array(4).fill("PROFESSIONALISM • EFFICIENCY • STRATEGY • ").map((text, i) => (
+            {Array(8).fill("PROFESSIONALISM • EFFICIENCY • STRATEGY • ").map((text, i) => (
               <h2 
                 key={i} 
                 className="font-display font-black text-transparent text-[80px] md:text-[150px] lg:text-[220px] leading-none drop-shadow-[0_0_10px_rgba(0,0,0,1)]"
@@ -113,12 +113,12 @@ export default function GraphicsSection() {
       </div>
       
       {/* Title / CTA floating on top */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-40">
+      <div className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 z-40 w-full px-6 flex justify-center">
         <a 
           href="https://www.appalachiadigital.com" 
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-8 py-4 md:px-12 md:py-6 bg-black/80 backdrop-blur-xl border-2 border-amber-gold text-amber-gold font-black text-lg md:text-2xl uppercase tracking-[0.2em] hover:bg-amber-gold hover:text-black transition-all duration-300 shadow-[0_0_40px_rgba(212,160,23,0.4)] hover:shadow-[0_0_60px_rgba(212,160,23,0.8)] group"
+          className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 md:px-12 md:py-6 bg-black/80 backdrop-blur-xl border-2 border-amber-gold text-amber-gold font-black text-lg md:text-2xl uppercase tracking-[0.2em] hover:bg-amber-gold hover:text-black transition-all duration-300 shadow-[0_0_40px_rgba(212,160,23,0.4)] hover:shadow-[0_0_60px_rgba(212,160,23,0.8)] group"
         >
           <span>Elevate Your Brand</span>
           <svg className="w-6 h-6 md:w-8 md:h-8 ml-4 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>

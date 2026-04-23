@@ -110,7 +110,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: -20, scale: 0.9 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-flex items-center bg-amber-gold/85 backdrop-blur-sm rounded-full px-2 py-1.5 gap-1 shadow-lg shadow-black/20 border border-amber-gold-light/30"
+                className="flex flex-wrap items-center bg-amber-gold/85 backdrop-blur-sm rounded-3xl md:rounded-full px-2 py-1.5 gap-1 shadow-lg shadow-black/20 border border-amber-gold-light/30 max-w-[calc(100vw-6rem)] md:max-w-none"
               >
                 {NAV_LINKS.map((link, i) => (
                   <motion.a
@@ -127,7 +127,8 @@ export default function HeroSection() {
                     {link.label}
                   </motion.a>
                 ))}
-                <div className="w-px h-6 bg-hero-orange-deep/30 mx-1" />
+                <div className="hidden md:block w-px h-6 bg-hero-orange-deep/30 mx-1" />
+                <div className="w-full h-px bg-hero-orange-deep/30 my-1 md:hidden" />
                 {SOCIALS.map((s, i) => (
                   <motion.a
                     key={s.label}
@@ -162,9 +163,9 @@ export default function HeroSection() {
               className="font-display font-black text-white uppercase leading-[0.9] tracking-tight"
               variants={glitchText}
             >
-              <span className="block text-[clamp(2.5rem,8vw,7rem)]">I&rsquo;M A DIGITAL</span>
-              <span className="block text-[clamp(2.5rem,8vw,7rem)]">JACK OF</span>
-              <span className="block text-[clamp(2.5rem,8vw,7rem)]">ALL TRADES</span>
+              <span className="block text-[clamp(2rem,8vw,7rem)]">I&rsquo;M A DIGITAL</span>
+              <span className="block text-[clamp(2rem,8vw,7rem)]">JACK OF</span>
+              <span className="block text-[clamp(2rem,8vw,7rem)]">ALL TRADES</span>
             </motion.h1>
 
             {/* ══════ TICKER — between headline and subtitle, BEHIND photo (z-20) ══════ */}

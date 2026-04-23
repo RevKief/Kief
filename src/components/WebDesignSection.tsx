@@ -39,7 +39,7 @@ export default function WebDesignSection() {
     <section 
       id="web-design" 
       onMouseMove={handleMouseMove}
-      className="relative w-full h-screen max-h-screen bg-black overflow-hidden py-8 flex flex-col cursor-crosshair"
+      className="relative w-full min-h-screen lg:h-screen lg:max-h-screen bg-black overflow-hidden py-12 md:py-8 flex flex-col cursor-crosshair"
     >
       
       {/* Background Gradient */}
@@ -90,7 +90,7 @@ export default function WebDesignSection() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
         >
-          <h2 className="font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-gold-light to-hero-orange text-5xl md:text-7xl uppercase tracking-tighter leading-none drop-shadow-[0_0_20px_rgba(212,160,23,0.5)]">
+          <h2 className="font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-gold-light to-hero-orange text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter leading-none drop-shadow-[0_0_20px_rgba(212,160,23,0.5)]">
             DIGITAL DOMINANCE
           </h2>
           <p className="font-marker text-white/70 mt-2 md:mt-0 text-xl tracking-widest rotate-[-2deg] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
@@ -119,7 +119,7 @@ export default function WebDesignSection() {
               >
                 {/* Content Wrapper */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <h3 className="font-display font-black text-white text-3xl md:text-5xl lg:text-6xl uppercase tracking-tighter leading-none transition-all duration-300 group-hover:translate-x-4 md:group-hover:translate-x-8 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-gold-light group-hover:to-hero-orange group-hover:italic group-hover:skew-x-[-10deg] group-hover:drop-shadow-[0_0_20px_rgba(212,160,23,0.8)]">
+                  <h3 className="font-display font-black text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl uppercase tracking-tighter leading-none transition-all duration-300 group-hover:translate-x-4 md:group-hover:translate-x-8 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-gold-light group-hover:to-hero-orange group-hover:italic group-hover:skew-x-[-10deg] group-hover:drop-shadow-[0_0_20px_rgba(212,160,23,0.8)]">
                     {project.name}
                   </h3>
                   
@@ -152,7 +152,7 @@ export default function WebDesignSection() {
         >
           <div className="relative border-2 border-amber-gold p-4 md:p-6 bg-black/80 backdrop-blur-md shadow-[0_0_30px_rgba(212,160,23,0.2)] hover:shadow-[0_0_50px_rgba(212,160,23,0.5)] transition-all duration-500 flex flex-col md:flex-row items-center justify-between">
             <div className="flex-1 text-center md:text-left mb-4 md:mb-0">
-              <h3 className="font-display font-black text-white text-2xl md:text-4xl uppercase tracking-tight mb-2 drop-shadow-[0_3px_0_rgba(212,160,23,0.8)]">
+              <h3 className="font-display font-black text-white text-xl md:text-3xl lg:text-4xl uppercase tracking-tight mb-2 drop-shadow-[0_3px_0_rgba(212,160,23,0.8)]">
                 Mog the competition.
               </h3>
               <p className="font-sans text-amber-gold-light text-sm md:text-base font-bold max-w-xl mx-auto md:mx-0 drop-shadow-[0_0_5px_rgba(232,184,48,0.3)]">

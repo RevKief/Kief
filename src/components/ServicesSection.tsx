@@ -43,7 +43,7 @@ export default function ServicesSection() {
         viewport={{ once: true, amount: 0.3 }}
       >
         {/* ══════ LEFT — IMAGE PUSHED LEFT ══════ */}
-        <motion.div className="relative flex justify-start -ml-4 lg:-ml-10" variants={fadeUp}>
+        <motion.div className="relative flex justify-center lg:justify-start lg:-ml-10" variants={fadeUp}>
           <div className="relative group cursor-pointer">
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-gradient-to-tr from-red-500 via-amber-400 to-red-600 scale-110" />
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-60 transition-opacity duration-700 delay-100 blur-3xl bg-gradient-to-bl from-yellow-300 via-red-500 to-orange-600 scale-125 animate-pulse" />
@@ -59,7 +59,7 @@ export default function ServicesSection() {
               <img 
                 src="/images/services-character.png" 
                 alt="Kiefer Character" 
-                className="relative z-10 w-full h-auto drop-shadow-[20px_20px_0_rgba(0,0,0,0.5)] group-hover:drop-shadow-[30px_30px_0_rgba(0,0,0,0.8)] filter contrast-125 saturate-110 transition-all duration-500 pointer-events-auto"
+                className="relative z-10 w-full max-w-[280px] sm:max-w-sm lg:max-w-none h-auto drop-shadow-[20px_20px_0_rgba(0,0,0,0.5)] group-hover:drop-shadow-[30px_30px_0_rgba(0,0,0,0.8)] filter contrast-125 saturate-110 transition-all duration-500 pointer-events-auto mx-auto lg:mx-0"
               />
 
               <motion.button
@@ -91,7 +91,7 @@ export default function ServicesSection() {
             <motion.a
               key={link.label}
               href={link.href}
-              className="group relative font-display font-black text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight leading-none py-4 block overflow-hidden"
+              className="group relative font-display font-black text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tight leading-none py-3 sm:py-4 block overflow-hidden"
               variants={fadeUp}
               whileHover={{ x: 24 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}

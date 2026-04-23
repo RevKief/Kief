@@ -14,7 +14,7 @@ const stagger: Variants = {
 
 export default function AppDevSection() {
   return (
-    <section id="app-development" className="relative w-full min-h-screen overflow-hidden bg-black flex items-center py-24">
+    <section id="app-development" className="relative w-full min-h-screen overflow-hidden bg-black flex items-center py-16 md:py-24">
       {/* Aggressive Outrun Sun */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-b from-red-600 via-orange-500 to-yellow-400 blur-[100px] opacity-30 pointer-events-none" />
       
@@ -35,7 +35,7 @@ export default function AppDevSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div variants={fadeUp}>
-            <h2 className="font-display font-black text-white text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter leading-none drop-shadow-[0_6px_0_rgba(220,38,38,1)]">
+            <h2 className="font-display font-black text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl uppercase tracking-tighter leading-none drop-shadow-[0_6px_0_rgba(220,38,38,1)]">
               APP<br/>DEV
             </h2>
             <div className="h-3 w-32 bg-amber-400 mt-6 shadow-[0_0_20px_rgba(251,191,36,0.6)]" />
@@ -45,7 +45,7 @@ export default function AppDevSection() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-8 relative">
-            <h3 className="font-display text-white text-4xl md:text-5xl lg:text-6xl leading-tight font-black uppercase tracking-tight relative z-10">
+            <h3 className="font-display text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-black uppercase tracking-tight relative z-10">
               A structure for<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400 drop-shadow-[0_0_10px_rgba(220,38,38,0.4)]">
                 sacred habits.
@@ -53,12 +53,12 @@ export default function AppDevSection() {
             </h3>
           </motion.div>
 
-          <motion.p variants={fadeUp} className="font-sans text-neutral-300 text-lg md:text-xl font-bold leading-relaxed max-w-xl border-l-4 border-red-500 pl-6 py-2 bg-gradient-to-r from-red-500/10 to-transparent">
+          <motion.p variants={fadeUp} className="font-sans text-neutral-300 text-base sm:text-lg md:text-xl font-bold leading-relaxed max-w-xl border-l-4 border-red-500 pl-4 sm:pl-6 py-2 bg-gradient-to-r from-red-500/10 to-transparent">
             Family Worship helps households and individuals practice consistent, Scripture-centered worship without the noise of social networks.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-4">
-            <p className="font-marker text-amber-400 text-3xl md:text-4xl tracking-wider rotate-[-2deg] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+            <p className="font-marker text-amber-400 text-2xl sm:text-3xl md:text-4xl tracking-wider rotate-[-2deg] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
               Plus it's a FREE app!
             </p>
           </motion.div>
@@ -68,7 +68,7 @@ export default function AppDevSection() {
               href="https://www.familyworship.io" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-5 bg-red-600 border-[3px] border-red-600 text-white font-black text-xl uppercase tracking-[0.2em] hover:bg-black hover:text-red-500 transition-all duration-300 group shadow-[0_0_30px_rgba(220,38,38,0.6)] rounded-sm"
+              className="inline-flex items-center justify-center px-6 py-4 sm:px-10 sm:py-5 bg-red-600 border-[3px] border-red-600 text-white font-black text-lg sm:text-xl uppercase tracking-[0.2em] hover:bg-black hover:text-red-500 transition-all duration-300 group shadow-[0_0_30px_rgba(220,38,38,0.6)] rounded-sm"
             >
               <span>Get The App</span>
               <svg className="w-6 h-6 ml-4 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
