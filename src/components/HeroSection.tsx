@@ -67,7 +67,7 @@ export default function HeroSection() {
         <img
           src="/images/hero-foreground.png"
           alt="Kiefer Likens"
-          className="w-full h-full object-cover md:w-auto md:object-contain object-bottom md:object-bottom drop-shadow-[0_0_60px_rgba(0,0,0,0.5)]"
+          className="w-full h-full object-cover md:w-auto md:object-contain object-right-bottom md:object-bottom drop-shadow-[0_0_60px_rgba(0,0,0,0.5)]"
         />
       </motion.div>
 
