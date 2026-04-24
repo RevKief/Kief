@@ -59,7 +59,7 @@ export default function HeroSection() {
 
       {/* ── Foreground photo: highest z so it's IN FRONT of ticker ── */}
       <motion.div
-        className="absolute inset-0 w-full h-full md:inset-auto md:right-0 md:bottom-0 md:h-[85vh] lg:h-[90vh] md:w-auto pointer-events-none select-none z-[5] md:z-30"
+        className="absolute bottom-0 right-0 h-[80vh] sm:h-[85vh] md:h-[85vh] lg:h-[90vh] w-auto pointer-events-none select-none z-[5] md:z-30 translate-x-[35%] sm:translate-x-[20%] md:translate-x-0"
         variants={scaleIn}
         initial="hidden"
         animate="show"
@@ -67,7 +67,7 @@ export default function HeroSection() {
         <img
           src="/images/hero-foreground.png"
           alt="Kiefer Likens"
-          className="w-full h-full object-cover md:w-auto md:object-contain object-right-bottom md:object-bottom drop-shadow-[0_0_60px_rgba(0,0,0,0.5)]"
+          className="h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_0_60px_rgba(0,0,0,0.5)]"
         />
       </motion.div>
 
